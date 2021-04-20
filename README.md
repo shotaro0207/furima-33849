@@ -16,7 +16,6 @@
 ### Association
 
 - has_many :items
-- has_many :credit_cards
 - has_many :destinations
 
 
@@ -29,7 +28,7 @@
 | category_id    | integer    | null: false                    |
 | state_id       | integer    | null: false                    |
 | delivery_fee_id| integer    | null: false                    |
-| consignor_id   | integer    | null: false                    |
+| prefectures_id | integer    | null: false                    |
 | days_id        | integer    | null: false                    |
 | price          | integer    | null: false                    |
 | user           | references | null: false, foreign_key: true |
@@ -38,7 +37,7 @@
 
 - has_one_attached :image
 - belongs_to :user
-- has_one :destination
+- has_one :sold_out
 
 
 # sold_outsテーブル
@@ -51,7 +50,7 @@
 ### Association
 
 - belongs_to :user
-- has_many :items
+- belongs_to :items
 
 # destinationsテーブル
 
@@ -62,7 +61,7 @@
 | municipality     | string     | null: false                    |
 | address          | string     | null: false                    |
 | building         | string     | ------------------------------ |
-| phone_number     | integer    | null: false                    |
+| phone_number     | string     | null: false                    |
 | sold_out         | references | null: false, foreign_key: true |
 
 ### Association
