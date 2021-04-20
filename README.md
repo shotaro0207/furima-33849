@@ -50,7 +50,8 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :items
+- belongs_to :item
+- has_one :destination
 
 # destinationsテーブル
 
@@ -66,7 +67,7 @@
 
 ### Association
 
-- has_many :sold_out
+- belongs_to :sold_out
 
 
 
